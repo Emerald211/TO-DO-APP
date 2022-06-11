@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do App</title>
+    <!-- CSS only -->
+    <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Josefin+Sans:wght@100&family=Montserrat+Alternates:wght@800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section style="padding:  2% 15%;" id="main" class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a  style="font-family: 'Grechen Fuemen', cursive; color: #50c2c9;" class="navbar-brand fs-1" href="#">TODO</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto py-4">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link" href="#">Features</a>
+                  <a onclick="goToRegister()" class="nav-link">Register</a>
+                  <a class="nav-link" href="login.html">Login</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div style="padding-top: 10%;" class="container-fluid d-flex align-items-center mobile ">
+            
+                <div class="row d-">
+                  <div class="col-sm-6  d-flex flex-column justify-content-center ">
+                    <h1 style="font-size: 4rem;" >I have not done this page </h1>
+                    <p style="font-family: 'Josefin Sans', sans-serif; font-weight: bold;" class="mt-2">All you need is a plan, the road map and the courage to press on your destination</p>
+                    <button style="width: 150px;" type="button" class="btn btn-info text-white">Plan now</button>
+                  </div>
+                  <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center ">
+                    <img style="width: 60%;" src="./images/hand-holding-notebook-and-pen-vector-9790871-removebg-preview.png" alt="">
+                  </div>
+                </div>
+              
+          </div>
+    </section>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

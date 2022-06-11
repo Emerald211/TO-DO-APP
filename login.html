@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Josefin+Sans:wght@100&family=Montserrat+Alternates:wght@800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Montserrat+Alternates:wght@800&family=Montserrat:wght@900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="register.css">
+</head>
+<body style="background-color:#EEEEEE; height: 100vh;" class="d-flex align-items-center justify-content-center">
+    <section>
+        <div style="padding-top: 10%;" class="container d-flex align-items-center mobile ">
+            
+            <div id="reverse" class="row ">
+              <div class="col-sm-6  d-flex flex-column justify-content-center align-items-center ">
+                <h1 style="font-size: 3rem; font-family:  'Grechen Fuemen', cursive;;" >Welcome Back!</h1>
+                
+                <form style="display: flex; flex-direction: column; align-items: center;" action="" id="loginForm">
+                    <input style="background-color: white; box-shadow: 1px 1px 5px 1px rgb(110, 106, 106); text-align: center; border: none; width: 300px; height: 40px; border-radius: 20px; color:grey;" placeholder="Enter your username" width="100%" type="text" required id="usernameLogin">
+                    <div>
+                        <input style="background-color: white; box-shadow: 1px 1px 5px 1px rgb(110, 106, 106); text-align: center; border: none; width: 300px; height: 40px; border-radius: 20px; color:grey;" placeholder="Password" width="100%" type="password" required id="passwordLog"> 
+                        <i onclick="hidePassword()" class="far fa-eye-slash" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+                    </div>
+                    <button onclick="Login()"  style="width: 80%;" type="submit" class="btn btn-info text-white mt-3" id="login">Login</button>
+                </form>
+               
+              </div>
+              <div class="col-sm-6 d-flex flex-column justify-content-center align-items-center ">
+                <img id="man" style="width: 100%;" src="./images/unusual-d-illustration-smart-phone-application-unusual-d-illustration-tourist-straw-hat-his-luggage-standing-170384072-removebg-preview.png" alt="">
+              </div>
+            </div>
+          
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
