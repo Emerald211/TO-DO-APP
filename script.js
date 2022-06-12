@@ -129,19 +129,65 @@ function hidePass() {
  function Login() {
      const usernameLogin = document.querySelector("#usernameLogin");
      const passwordLogin =  document.querySelector("#passwordLog");
+     const messagecon = document.querySelector(".message-con");
+     const messageText = document.querySelector("#message-text")
+     const loginForm = document.querySelector("#loginForm")
+
+     isValid = loginForm.checkValidity();
+
+     
+    
 
      console.log(usernameLogin.value);
      console.log(passwordLogin);
 
-     if(usernameLogin.value === localStorage.getItem("name")  && passwordLogin.value === localStorage.getItem("password") ) {
-         alert("welcome")
+    //  if(usernameLogin.value === localStorage.getItem("name")  && passwordLogin.value === localStorage.getItem("password") ) {
+    //     //  alert("welcome")
+    //     messageText.textContent = "Login successful"
+    //     messageText.style.color = "green"
+    //     messagecon.style.border = "2px solid green"
+    //     // const url = "Todo.html"
+    //     //  window.open(url)
+
+    //  } else {
+    //     messageText.textContent = "Pls fill the form correctly"
+    //     messageText.style.color = "red"
+    //     messagecon.style.border = "2px solid"
+    //     messagecon.style.borderColor = "red"
+    //     //  alert ("Pls fill in the from correctly")
+
+    //  }
+
+     if(!isValid) {
+        messageText.textContent = "Fill out all details correctly";
+        messageText.style.color = "red";
+        messagecon.style.border = "2px solid"
+        messagecon.style.borderColor = "red";
+        return;
+     } else if(usernameLogin.value === localStorage.getItem("name")  && passwordLogin.value === localStorage.getItem("password") ) {
+        //  alert("welcome")
+        messageText.textContent = "Login successful"
+        messageText.style.color = "green"
+        messagecon.style.border = "2px solid green"
         const url = "Todo.html"
          window.open(url)
 
+     
+
      } else {
-         alert (" no")
+        messageText.textContent = "Pls fill the form correctly"
+        messageText.style.color = "red"
+        messagecon.style.border = "2px solid"
+        messagecon.style.borderColor = "red"
+        //  alert ("Pls fill in the from correctly")
      }
  }
+
+ const welcomeuser = document.querySelector("#user-welcome");
+
+ welcomeuser.textContent = "Welcome " + localStorage.getItem("name")
+ 
+ console.log(welcomeuser)
 
  
 
