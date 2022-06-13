@@ -208,6 +208,42 @@ function hidePass() {
  
  console.log(welcomeuser)
 
+
+ function addTask() {
+     const task = document.querySelector("#task");
+     const taskContainer = document.querySelector("#new-task");
+     const reset = document.querySelector("#reset");
+
+     console.log(task.value)
+
+     console.log(taskContainer)
+
+     if(task.value === "") {
+         alert("add a task")
+     } else {
+        
+     const check = document.createElement('input')
+     check.type = "radio"
+     check.style.width ="40px"
+     const newTask = document.createElement("h5");
+     newTask.textContent = task.value
+
+     const div = document.createElement("div");
+
+     div.classList.add("div")
+
+     div.append(check)
+     div.append(newTask)
+     taskContainer.append(div);
+
+
+     reset.type = "reset"
+     }
+
+
+     
+ }
+
  
 
 
