@@ -44,6 +44,25 @@ function hidePass() {
  
  }
 
+ function hideLoginPassword() {
+     const plog = document.querySelector("#passwordLog")
+     const togglelog = document.querySelector("#togglelog");
+
+     if( plog.type === "password") {
+        plog.type = "text"
+        togglelog.classList.remove("fa-eye-slash")
+        togglelog.classList.add("fa-eye");
+    } else {
+        plog.type = "password"
+
+        togglelog.classList.remove("fa-eye")
+        togglelog.classList.add("fa-eye-slash");
+    }
+
+    togglelog.classList.toggle("far fa-eye")
+    
+ }
+
  const form = document.querySelector("#form");
  const password1 = document.querySelector("#password");
  const password2 = document.querySelector("#pass");
