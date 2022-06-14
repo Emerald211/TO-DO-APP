@@ -214,6 +214,10 @@ function hidePass() {
      const taskContainer = document.querySelector("#new-task");
      const reset = document.querySelector("#reset");
 
+     const nodata = document.querySelector("#aa");
+
+     nodata.style.display = "none";
+
      console.log(task.value)
 
      console.log(taskContainer)
@@ -228,22 +232,61 @@ function hidePass() {
      const newTask = document.createElement("h5");
      newTask.textContent = task.value
 
+
+      
+    const closeTask = document.createElement("img")
+    closeTask.style.width = "20px"
+    closeTask.style.marginLeft = "auto"
+    closeTask.setAttribute("src", "./images/close.png")
+    closeTask.setAttribute("alt", "man")
+    
      const div = document.createElement("div");
 
      div.classList.add("div")
 
      div.append(check)
      div.append(newTask)
+     div.append(closeTask)
      taskContainer.append(div);
 
 
-     reset.type = "reset"
+     function deleteTask() {
+
+     div.style.display = "none"
+
+     }
+
+
+     closeTask.addEventListener("click", deleteTask)
+
+
+     
      }
 
 
      
  }
 
+
+ function openNav() {
+    const openIt = document.getElementById("mySidenav");
+    openIt.style.width = '250px';
+
+
+
+
+}
+
+function closeNav() {
+    const closeIt = document.getElementById("mySidenav");
+    closeIt.style.width = "0px";
+}
+
+
+function signout() {
+    const url = "login.html"
+    window.open(url)
+}
  
 
 

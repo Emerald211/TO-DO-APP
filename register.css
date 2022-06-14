@@ -22,4 +22,8 @@ input {
     #man {
         width: 30% !important;
     }
+
+    #onboard {
+        font-size: 2rem !important;
+    }
 }
