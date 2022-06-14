@@ -108,9 +108,7 @@ function validateForm() {
          message.style.color = "green";
          messageContainer.style.border = "2px solid"
          messageContainer.style.borderColor = "green";
-         
-         const url = "Todo.html"
-         window.open(url);
+        
         }
         
         
@@ -121,6 +119,7 @@ function validateForm() {
     
     
     
+ 
     function processForm(a) {
         a.preventDefault();
         
@@ -142,11 +141,19 @@ function validateForm() {
             
             console.log(localStorage.getItem("name"));
             console.log(localStorage.getItem("password"));
+             alert("Registration successful, Please Login")
+         const url = "login.html"
+         window.open(url);
         }
         
+        Login();
     }
+
+    
     form.addEventListener('submit', processForm);
- 
+    
+    
+
     function Login() {
         const usernameLogin = document.querySelector("#usernameLogin");
         const passwordLogin =  document.querySelector("#passwordLog");
@@ -178,8 +185,8 @@ function validateForm() {
        //     //  alert ("Pls fill in the from correctly")
     
        //  }
-    
-        if(!isValid) {
+       
+       if(!isValid) {
            messageText.textContent = "Fill out all details correctly";
            messageText.style.color = "red";
            messagecon.style.border = "2px solid"
@@ -191,19 +198,25 @@ function validateForm() {
            messageText.style.color = "green"
            messagecon.style.border = "2px solid green"
            const url = "Todo.html"
+           
+  
             window.open(url)
+
+ 
     
         
     
         } else {
-           messageText.textContent = "Pls fill the form correctly"
+           messageText.textContent = "Incorrect Info"
            messageText.style.color = "red"
            messagecon.style.border = "2px solid"
            messagecon.style.borderColor = "red"
            //  alert ("Pls fill in the from correctly")
         }
+        console.log(usernameLogin.value)
     }
-    
+
+  
     
     
     function addTask() {
@@ -294,9 +307,3 @@ function signout() {
 
 
 
-
-const welcomeuser = document.querySelector("#user-welcome");
-
-welcomeuser.textContent = "Welcome " + localStorage.getItem("name")
-
-console.log(welcomeuser)
