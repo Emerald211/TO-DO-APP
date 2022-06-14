@@ -136,7 +136,7 @@ function validateForm() {
         if(isValid && passwordMatch) {
             // console.log(user.name);
             
-            localStorage.setItem("name", user.name)
+            localStorage.setItem("name", user.username)
             localStorage.setItem("password", user.password)
             
             console.log(localStorage.getItem("name"));
@@ -144,10 +144,12 @@ function validateForm() {
              alert("Registration successful, Please Login")
          const url = "login.html"
          window.open(url);
+
         }
         
-        Login();
+        
     }
+
 
     
     form.addEventListener('submit', processForm);
@@ -202,6 +204,8 @@ function validateForm() {
   
             window.open(url)
 
+           
+
  
     
         
@@ -216,6 +220,7 @@ function validateForm() {
         console.log(usernameLogin.value)
     }
 
+
   
     
     
@@ -224,6 +229,10 @@ function validateForm() {
         const taskContainer = document.querySelector("#new-task");
         const reset = document.querySelector("#reset");
         
+         
+    const welcomeUser = document.querySelector("#user-welcome");
+
+    welcomeUser.innerHTML = localStorage.getItem("name");
         const nodata = document.querySelector("#aa");
         
         nodata.style.display = "none";
@@ -275,7 +284,9 @@ function validateForm() {
 
 
 
+
 }
+
 
 
 function openNav() {
